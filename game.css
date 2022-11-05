@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poor Story', cursive;
+    font-weight: 800;
+    overflow: hidden;
+}
+body{
+    height:fit-content;
+    width: 100%;
+    flex-wrap: wrap;
+    background-size: 50% 100%;
+    background-color: rgb(212, 215, 148);
+}
+.game-container{
+    height: 45em;
+}
+.sky{
+    background-image: url(./assets/fb-game-background.png);
+    height: 36em;
+    width:100%;
+    position: absolute;
+    z-index: 0;
+
+}
+.ground{
+    background-image: url(./assets/bottom-background.png);
+    height: 9em;
+    border-bottom: 10px rgb(185, 105, 0);
+    background-repeat: repeat-x;
+    animation: slideright 1000s infinite linear;
+    /* -webkit-animation: slideright 100s infinite linear; */
+    width: 100%;
+    position: absolute;
+    top: 36em;
+    z-index: 3;
+
+}
+.content{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 13em;
+
+    color: rgb(0, 0, 0);
+}
+
+
+#bird{
+    height: 5em;
+    width: 5em;
+    filter: brightness(120%);
+    filter: contrast(120%);
+    filter: drop-shadow(-3px 4px 4px rgb(238, 223, 16));
+    /* margin-top: 3em; */
+    margin-top: 0em;
+    margin-left: 0em;
+    position: absolute;
+    z-index: 2;
+}
+h1{
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.obstacles {
+    background-image: url('./assets/flappybird-pipe.png');
+    width: 3.7em;
+    height: 18.8em;
+    position: absolute;
+    z-index: 1;
+}
+
+.topObstacle {
+    background-image: url('./assets/flappybird-pipe.png');
+    transform: rotate(180deg);
+    width: 60px;
+    height: 300px;
+    position: absolute;
+}
+
+@media only screen and (max-width: 551px) {
+    body{ 
+           background-color: rgb(212, 215, 148);
+    }
+    .sky{
+        height: 36em;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        /* background-size: contain; */
+        
+    }
+    .ground{
+        height: 9em;
+    }
+}
+@keyframes slideright {
+    from {
+        background-position: 15000em;
+    }
+    to {
+        background-position: 0em;
+    }
+  }

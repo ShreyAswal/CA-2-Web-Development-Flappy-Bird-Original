@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poor Story', cursive;
+    font-weight: 800;
+}
+body{
+    height:fit-content;
+    width: 100%;
+    flex-wrap: wrap;
+    background-size: 50% 100%;
+    background-color: rgb(212, 215, 148);
+}
+.sky{
+    background-image: url(./assets/fb-game-background.png);
+    height: 36em;
+    animation-name: movingsky;
+    animation-duration: 5s;
+    animation-iteration-count: once;
+}
+.ground{
+    background-image: url(./assets/bottom-background.png);
+    height: 9.4em;
+    border-bottom: 10px rgb(185, 105, 0);
+
+}
+.content{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 13em;
+    color: rgb(0, 0, 0);
+}
+input{
+    margin: 0.1em;
+    height: 1.5em;
+    width:10em;
+    cursor:text;
+    border-radius: 5em;
+    border-radius: 0.5em;
+    background-color: rgba(54, 34, 17, 0.267);
+    text-align: center;
+    
+} 
+input:hover{
+    box-shadow: 10em black;
+}
+
+span{
+    margin: 0.4em;
+    font-size: x-large;
+}
+
+#bird{
+    filter: brightness(120%);
+    filter: contrast(120%);
+    filter: drop-shadow(-5px 10px 5px rgb(238, 223, 16));
+    height: 4em;
+    width: 5em;
+}
+
+button{
+    margin-top: 2em;
+    height: 2em;
+    width: 6em;
+    border-radius: 0.5em;
+    background-color: rgb(232, 159, 96);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: aqua;
+    letter-spacing: 0.1em;
+}
+
+@media only screen and (max-width: 551px) {
+    body{ 
+           background-color: rgb(212, 215, 148);
+    }
+    .sky{
+        height: 36em;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        background-size: contain;
+        
+    }
+    .ground{
+        height: 9.5em;
+    }
+}
+@keyframes movingsky {
+    from{
+        padding-right: 36em;
+    }
+    to{
+        padding-right: 0em;
+    }
+}
